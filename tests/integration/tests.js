@@ -15,5 +15,11 @@ describe('calculator functionality', function() {
     element(by.css('#number2')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('2')
   })
+//Do the number buttons update the display of the running total?
+
+   it('should have the number buttons update the display of the running total', function(){
+     element(by.css('#number3')).click();
+     expect(running_total.getAttribute('value')).to.
+   })
 
 });
