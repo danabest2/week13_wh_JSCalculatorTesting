@@ -65,10 +65,14 @@ describe('calculator', function () {
  });
 //calculator.clearClick() - clear the running total without affecting the calculation
   it('clear button clears displayed when clicked', function(){
+    calculator.runningTotal = 21;
+    calculator.operatorClick('-');
     calculator.numberClick(7);
-    calculator.operatorClick('*');
     calculator.clearClick();
-    assert.equal('0', calculator.runningTotal);
+    calculator.numberClick(1);
+    calculator.operatorClick('=');
+    const actual = calculator.runningTotal;
+    assert.equal(actual,'20');
 });
 
 });
